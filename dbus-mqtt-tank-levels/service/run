@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "*** starting dbus-mqtt-tank-levels ***"
+exec 2>&1
+exec /data/etc/dbus-mqtt-tank-levels/dbus-mqtt-tank-levels.py
