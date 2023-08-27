@@ -90,12 +90,12 @@ standard = 0
 ### Install
 1. Copy the ```dbus-mqtt-tank-levels``` folder to ```/data/etc``` on your Venus OS device
 
-2. Run ```bash /data/etc/dbus-mqtt-dbus-mqtt-tank-levels/install.sh``` as root
+2. Run ```bash /data/etc/dbus-mqtt-tank-levels/install.sh``` as root
 
 The daemon-tools should start this service automatically within seconds.
 
 ### Uninstall
-Run ```/data/etc/dbus-mqtt-dbus-mqtt-tank-levels/uninstall.sh```
+Run ```/data/etc/dbus-mqtt-tank-levels/uninstall.sh```
 
 ### Restart
 Run ```/data/etc/dbus-mqtt-tank-levels/restart.sh```
