@@ -314,9 +314,9 @@ class DbusMqttLevelService2:
         servicename,
         deviceinstance,
         paths,
-        productname="MQTT Temperature 2",
-        customname="MQTT Temperature 2",
-        connection="MQTT Temperature service 2",
+        productname="MQTT Tank Levels 2",
+        customname="MQTT Tank Levels 2",
+        connection="MQTT Tank Levels service 2",
     ):
         self._dbusservice = VeDbusService(servicename,dbusconnection())
         self._paths = paths
@@ -336,7 +336,7 @@ class DbusMqttLevelService2:
         self._dbusservice.add_path("/ProductId", 0xFFFF)
         self._dbusservice.add_path("/ProductName", productname)
         self._dbusservice.add_path("/CustomName", customname)
-        self._dbusservice.add_path("/FirmwareVersion", "0.0.1 (20230721)")
+        self._dbusservice.add_path("/FirmwareVersion", "0.0.1 (20230824)")
         # self._dbusservice.add_path('/HardwareVersion', '')
         self._dbusservice.add_path("/Connected", 1)
 
