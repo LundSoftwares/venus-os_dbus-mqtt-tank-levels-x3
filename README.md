@@ -118,6 +118,12 @@ It was tested on Venus OS Large ```v3.01``` on the following devices:
 - RaspberryPi 3b+
 - Simulated Sensor data sent from NodeRed
 
+
+And on Venus OS Large ```v2.92``` on the following devices:
+
+- RaspberryPi 4
+- Real Sensor data sent from NodeRed
+
 ### NodeRed Example code
 
 <details>
