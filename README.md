@@ -1,15 +1,15 @@
-# venus-os_dbus-mqtt-tank-levels-x2 - Emulates up to 2 separate tank level sensors in VenusOS from info in MQTT data
+# venus-os_dbus-mqtt-tank-levels-x3 - Emulates up to 3 separate tank level sensors in VenusOS from info in MQTT data
 
 **First off, a big thanks to [mr-manuel](https://github.com/mr-manuel) that created a bunch of templates that made this possible**
 
-GitHub repository: [LundSoftwares/venus-os_dbus-mqtt-tank-levels-x2](https://github.com/LundSoftwares/venus-os_dbus-mqtt-tank-levels-x2)
+GitHub repository: [LundSoftwares/venus-os_dbus-mqtt-tank-levels-x3](https://github.com/LundSoftwares/venus-os_dbus-mqtt-tank-levels-x3)
 
 ### Disclaimer
 I'm not responsible for the usage of this script. Use on own risk! 
 
 
 ### Purpose
-The script emulates up to 2 tank level sensors in Venus OS. It gets the MQTT data from a subscribed topic and publishes the information on the dbus as the service com.victronenergy.tank.mqtt_tank_levels with the VRM instances from the Config file.
+The script emulates up to 3 tank level sensors in Venus OS. It gets the MQTT data from a subscribed topic and publishes the information on the dbus as the service com.victronenergy.tank.mqtt_tank_levels with the VRM instances from the Config file.
 
 
 ### Config
@@ -20,7 +20,7 @@ Copy or rename the config.sample.ini to config.ini in the dbus-mqtt-tank-levels 
 <summary>Example: Set number of instances to create, then set custom name, VRM Instance, tank capacity, type and sensor standard for all Sensors</summary>
 
 ```ruby
-;How many Tank instances? 1 or 2
+;How many Tank instances? 1, 2 or 3
 instances = 1	
 
 ;-------------------------------------------------------------
@@ -82,6 +82,8 @@ standard = 0
     "remaining": 0.225,
     "level2": 50,
     "remaining2": 0.125,
+    "level3": 50,
+    "remaining3": 0.125,
 }
 ```
 </details>
@@ -113,13 +115,7 @@ If the seconds are under 5 then the service crashes and gets restarted all the t
 If the script stops with the message ```dbus.exceptions.NameExistsException: Bus name already exists: com.victronenergy.tank.mqtt_tank_levels"``` it means that the service is still running or another service is using that bus name.
 
 ### Compatibility
-It was tested on Venus OS Large ```v3.01``` on the following devices:
-
-- RaspberryPi 3b+
-- Simulated Sensor data sent from NodeRed
-
-
-And on Venus OS Large ```v2.92``` on the following devices:
+Tested with Venus OS Large ```v3.40``` on the following devices:
 
 - RaspberryPi 4
 - Real Sensor data sent from NodeRed
